@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "6558f74828bca9ebecac73d90cea4b1a",
+    "content-hash": "4d7d9ac9179448d9b9598660d773e8dd",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -57,6 +57,122 @@
                 "stack"
             ],
             "time": "2019-12-24T22:41:47+00:00"
+        },
+        {
+            "name": "bjuppa/laravel-blog",
+            "version": "v1.8.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/bjuppa/laravel-blog.git",
+                "reference": "0e1742210a07256fad177837843e228a9ce9b3fd"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/bjuppa/laravel-blog/zipball/0e1742210a07256fad177837843e228a9ce9b3fd",
+                "reference": "0e1742210a07256fad177837843e228a9ce9b3fd",
+                "shasum": ""
+            },
+            "require": {
+                "bjuppa/metatagbag": "^1.0",
+                "illuminate/database": "5.6.*|| 5.7.* || 5.8.* || ^6.0 || ^7.0",
+                "illuminate/http": "5.6.* || 5.7.* || 5.8.* || ^6.0 || ^7.0",
+                "illuminate/routing": "5.6.* || 5.7.* || 5.8.* || ^6.0 || ^7.0",
+                "illuminate/support": "~5.6.8 || 5.7.* || 5.8.* || ^6.0 || ^7.0",
+                "illuminate/view": "5.6.* || 5.7.* || 5.8.* || ^6.0 || ^7.0",
+                "league/commonmark": "^1.3",
+                "php": "^7.1.3",
+                "spatie/laravel-sluggable": "^2.1"
+            },
+            "require-dev": {
+                "andrefigueira/blog-article-faker": "^1.0",
+                "laravel/framework": ">=5.6.25",
+                "mockery/mockery": "^1.0",
+                "orchestra/testbench": "~3.6 || ^4.0 || ^5.0",
+                "phpunit/phpunit": ">=7.5",
+                "squizlabs/php_codesniffer": "^3.3"
+            },
+            "suggest": {
+                "bjuppa/laravel-blog-admin": "An optional admin interface for the Eloquent blogs configured in bjuppa/laravel-blog"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Bjuppa\\LaravelBlog\\BlogServiceProvider"
+                    ],
+                    "aliases": []
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Bjuppa\\LaravelBlog\\": "src/",
+                    "Bjuppa\\LaravelBlog\\Database\\Seeds\\": "database/seeds/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Björn Nilsved",
+                    "email": "nilsved@gmail.com"
+                }
+            ],
+            "description": "Add blog functionality to your Laravel project",
+            "homepage": "https://github.com/bjuppa/laravel-blog",
+            "keywords": [
+                "blog",
+                "laravel"
+            ],
+            "time": "2020-08-21T13:36:07+00:00"
+        },
+        {
+            "name": "bjuppa/metatagbag",
+            "version": "v1.1.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/bjuppa/metatagbag.git",
+                "reference": "7fc6150170bd42325452fe2704275e0357fa1879"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/bjuppa/metatagbag/zipball/7fc6150170bd42325452fe2704275e0357fa1879",
+                "reference": "7fc6150170bd42325452fe2704275e0357fa1879",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/contracts": "^5.6 || ^6.0 || ^7.0",
+                "illuminate/support": "^5.6 || ^6.0 || ^7.0",
+                "php": "^7.1.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^8.3.4"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Bjuppa\\MetaTagBag\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Björn Nilsved",
+                    "email": "nilsved@gmail.com"
+                }
+            ],
+            "description": "A convenient collection for HTML meta tags",
+            "keywords": [
+                "bag",
+                "collection",
+                "laravel",
+                "meta-tag"
+            ],
+            "time": "2020-03-20T09:57:41+00:00"
         },
         {
             "name": "brick/math",
@@ -2074,6 +2190,61 @@
                 }
             ],
             "time": "2020-08-18T17:17:46+00:00"
+        },
+        {
+            "name": "spatie/laravel-sluggable",
+            "version": "2.5.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/spatie/laravel-sluggable.git",
+                "reference": "7b5192fb808b6ae87ac5b009b69f7ea0b9b7c4ff"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/spatie/laravel-sluggable/zipball/7b5192fb808b6ae87ac5b009b69f7ea0b9b7c4ff",
+                "reference": "7b5192fb808b6ae87ac5b009b69f7ea0b9b7c4ff",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/database": "^7.0",
+                "illuminate/support": "^7.0",
+                "php": "^7.4"
+            },
+            "require-dev": {
+                "orchestra/testbench": "^5.0",
+                "spatie/laravel-translatable": "^4.3"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Spatie\\Sluggable\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Freek Van der Herten",
+                    "email": "freek@spatie.be",
+                    "homepage": "https://spatie.be",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Generate slugs when saving Eloquent models",
+            "homepage": "https://github.com/spatie/laravel-sluggable",
+            "keywords": [
+                "laravel-sluggable",
+                "spatie"
+            ],
+            "funding": [
+                {
+                    "url": "https://spatie.be/open-source/support-us",
+                    "type": "custom"
+                }
+            ],
+            "time": "2020-06-15T13:22:23+00:00"
         },
         {
             "name": "swiftmailer/swiftmailer",
