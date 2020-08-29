@@ -42,9 +42,9 @@ services:
 
   composer:
     image: composer
-    command: composer require bjuppa/laravel-blog --ignore-platform-reqs
+#    command: composer require bjuppa/laravel-blog --ignore-platform-reqs
 #    command: composer update --ignore-platform-reqs
-#    command: composer install --ignore-platform-reqs
+    command: composer install --ignore-platform-reqs
     volumes:
       - ./:/app
 
