@@ -48,7 +48,7 @@
                     </h2>
                     <p class="header-text-small">{{ __('common.quote_sign') }}</p>
                     <div class="d-flex justify-content-center">
-                        <button onClick="ga('send', 'event', 'Knopka', 'Zapisatyaobratnui');" class="btn-header">{{ __('common.order') }}</button>
+                        <button onClick="/*ga('send', 'event', 'Knopka', 'Zapisatyaobratnui');*/" class="btn-header">{{ __('common.order') }}</button>
                     </div>
                 </div>
             </div>

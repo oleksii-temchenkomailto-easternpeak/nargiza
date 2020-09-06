@@ -51,7 +51,7 @@
 <script type="text/javascript">
     document.addEventListener( 'wpcf7mailsent', function( event ) {
         if ( '8' == event.detail.contactFormId ) {
-            _gaq.push(['_trackEvent', 'Knopka2','Zapisatyapolnui']);
+            //_gaq.push(['_trackEvent', 'Knopka2','Zapisatyapolnui']);
         }
     }, false );
 </script>

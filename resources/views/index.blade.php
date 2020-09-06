@@ -1,9 +1,4 @@
 @php
-/*    $contacts = new \StdClass;
-    $contacts->phone = '+38 (050) 303 1910';
-    $contacts->hrefPhone = 'tel:+380503031910';
-    $contacts->email = 'yanova.psi@gmail.com';
-    $contacts->skype = 'lyuba-y';/**/
 
     $networks = new \StdClass;
 

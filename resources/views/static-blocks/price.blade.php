@@ -39,9 +39,9 @@
                             <div class="screen-reader-response"></div>
                             <form action="/#wpcf7-f8-p6-o2" method="post" class="wpcf7-form" novalidate="novalidate">
                                 @csrf
-                                <p><span class="wpcf7-form-control-wrap text-109"><input type="text" name="text-109" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required price-input" aria-required="true" aria-invalid="false" placeholder="{{__('common.price-placeholder-name')}}"/></span><br/>
-                                    <span class="wpcf7-form-control-wrap tel-839"><input type="tel" name="tel-839" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-tel wpcf7-validates-as-required wpcf7-validates-as-tel price-input tel" aria-required="true" aria-invalid="false" placeholder="+380 __ - ___ - __ - __"/></span><br/>
-                                    <span class="wpcf7-form-control-wrap text-110"><input type="text" name="text-110" value="" size="40" class="wpcf7-form-control wpcf7-text price-input" aria-invalid="false" placeholder="{{__('common.price-placeholder-skype')}}"/></span></p>
+                                <p><span class="wpcf7-form-control-wrap text-109"><input type="text" name="name" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required price-input" aria-required="true" aria-invalid="false" placeholder="{{__('common.price-placeholder-name')}}"/></span><br/>
+                                    <span class="wpcf7-form-control-wrap tel-839"><input type="tel" name="phone" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-tel wpcf7-validates-as-required wpcf7-validates-as-tel price-input tel" aria-required="true" aria-invalid="false" placeholder="+380 __ - ___ - __ - __"/></span><br/>
+                                    <span class="wpcf7-form-control-wrap text-110"><input type="text" name="skype" value="" size="40" class="wpcf7-form-control wpcf7-text price-input" aria-invalid="false" placeholder="{{__('common.price-placeholder-skype')}}"/></span></p>
                                 <p><input type="submit" value="{{__('common.order')}}" class="wpcf7-form-control wpcf7-submit price-submit"/></p>
                                 <div class="wpcf7-response-output wpcf7-display-none"></div></form></div>            </div>
                 </div>

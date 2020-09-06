@@ -182,7 +182,7 @@
                             <div class="screen-reader-response"></div>
                             <form action="/#wpcf7-f55-o1" method="post" class="wpcf7-form d-flex flex-wrap justify-content-md-center justify-content-sm-center justify-content-center form-mail formsub" novalidate="novalidate">
                                 @csrf
-                                <p><span class="wpcf7-form-control-wrap email-620"><input type="email" name="email-620" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-required wpcf7-validates-as-email subscribe-email" aria-required="true" aria-invalid="false" placeholder="{{__('common.your-email')}}"/></span><br/>
+                                <p><span class="wpcf7-form-control-wrap email-620"><input type="email" name="subscribtion-email" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-required wpcf7-validates-as-email subscribe-email" aria-required="true" aria-invalid="false" placeholder="{{__('common.your-email')}}"/></span><br/>
                                     <input type="submit" value="Подписаться!" class="wpcf7-form-control wpcf7-submit subscribe-submit"/></p>
                                 <div class="wpcf7-response-output wpcf7-display-none"></div></form></div>              </div>
                 </div>

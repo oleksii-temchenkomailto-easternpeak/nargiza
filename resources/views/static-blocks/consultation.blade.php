@@ -21,7 +21,7 @@
                             <p class="consultation-text">{{$text}}</p>
                         </div>
                     @endforeach
-                    <div class="d-flex justify-content-center"><button class="btn-consultation" onClick="_gaq.push(['_trackEvent','Knopka','Zapisatyaobratnui']);">{{__('common.order')}}</button></div>
+                    <div class="d-flex justify-content-center"><button class="btn-consultation" onClick="/*_gaq.push(['_trackEvent','Knopka','Zapisatyaobratnui']);*/">{{__('common.order')}}</button></div>
                 </div>
             </div>
         </div>
