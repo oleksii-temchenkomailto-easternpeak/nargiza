@@ -131,7 +131,7 @@ ul.menu-header-fixed{margin-top:16px !important;}
 .block-cause-1{margin-left:10px;}
 .block-cause-2{margin-left:40px;}
 .block-cause-3{margin-left:80px;}
-.block-cause-6{margin-left:80px;margin-bottom:68px;}
+.block-cause-last{margin-bottom:68px;}
 .block-cause-circle{width:66px;height:66px;background-color:#69dbd9;margin-right:27px;-webkit-border-radius:50%;border-radius:50%;-webkit-transition:all 0.4s;-o-transition:all 0.4s;transition:all 0.4s;}
 .block-cause-circle:hover{background-color:#40d1cf;}
 .cause-circle-count{color:#0f2b4f;font-family:Montserrat;font-size:30px;font-weight:700;}
