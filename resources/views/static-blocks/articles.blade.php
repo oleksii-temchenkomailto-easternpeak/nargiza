@@ -162,6 +162,8 @@
               <div class="d-flex justify-content-center"> -->
             <script>
                 var ajaxurl = '{{url('/admin-ajax')}}';
+                var loading_text = {!! json_encode(__('common.loading')) !!};
+                var load_more_text = {!! json_encode(__('common.load-more')) !!};
                 var true_posts = 'a:66:{s:9:"post_type";s:4:"blog";s:9:"showposts";i:4;s:7:"orderby";s:4:"date";s:5:"order";s:3:"ASC";s:7:"publish";b:1;s:5:"error";s:0:"";s:1:"m";s:0:"";s:1:"p";i:0;s:11:"post_parent";s:0:"";s:7:"subpost";s:0:"";s:10:"subpost_id";s:0:"";s:10:"attachment";s:0:"";s:13:"attachment_id";i:0;s:4:"name";s:0:"";s:8:"pagename";s:0:"";s:7:"page_id";i:0;s:6:"second";s:0:"";s:6:"minute";s:0:"";s:4:"hour";s:0:"";s:3:"day";i:0;s:8:"monthnum";i:0;s:4:"year";i:0;s:1:"w";i:0;s:13:"category_name";s:0:"";s:3:"tag";s:0:"";s:3:"cat";s:0:"";s:6:"tag_id";s:0:"";s:6:"author";s:0:"";s:11:"author_name";s:0:"";s:4:"feed";s:0:"";s:2:"tb";s:0:"";s:5:"paged";i:0;s:8:"meta_key";s:0:"";s:10:"meta_value";s:0:"";s:7:"preview";s:0:"";s:1:"s";s:0:"";s:8:"sentence";s:0:"";s:5:"title";s:0:"";s:6:"fields";s:0:"";s:10:"menu_order";s:0:"";s:5:"embed";s:0:"";s:12:"category__in";a:0:{}s:16:"category__not_in";a:0:{}s:13:"category__and";a:0:{}s:8:"post__in";a:0:{}s:12:"post__not_in";a:0:{}s:13:"post_name__in";a:0:{}s:7:"tag__in";a:0:{}s:11:"tag__not_in";a:0:{}s:8:"tag__and";a:0:{}s:12:"tag_slug__in";a:0:{}s:13:"tag_slug__and";a:0:{}s:15:"post_parent__in";a:0:{}s:19:"post_parent__not_in";a:0:{}s:10:"author__in";a:0:{}s:14:"author__not_in";a:0:{}s:19:"ignore_sticky_posts";b:0;s:16:"suppress_filters";b:0;s:13:"cache_results";b:1;s:22:"update_post_term_cache";b:1;s:19:"lazy_load_term_meta";b:1;s:22:"update_post_meta_cache";b:1;s:14:"posts_per_page";i:4;s:8:"nopaging";b:0;s:17:"comments_per_page";s:2:"50";s:13:"no_found_rows";b:0;}';
                 var current_page = 1;
                 var max_pages = '3';
@@ -180,7 +182,7 @@
                         </div>
                         <div role="form" class="wpcf7" id="wpcf7-f55-o1" lang="ru-RU" dir="ltr">
                             <div class="screen-reader-response"></div>
-                            <form action="/#wpcf7-f55-o1" method="post" class="wpcf7-form d-flex flex-wrap justify-content-md-center justify-content-sm-center justify-content-center form-mail formsub" novalidate="novalidate">
+                            <form action="/subscribe" method="post" class="wpcf7-form d-flex flex-wrap justify-content-md-center justify-content-sm-center justify-content-center form-mail formsub" novalidate="novalidate">
                                 @csrf
                                 <p><span class="wpcf7-form-control-wrap email-620"><input type="email" name="subscribtion-email" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-required wpcf7-validates-as-email subscribe-email" aria-required="true" aria-invalid="false" placeholder="{{__('common.your-email')}}"/></span><br/>
                                     <input type="submit" value="Подписаться!" class="wpcf7-form-control wpcf7-submit subscribe-submit"/></p>

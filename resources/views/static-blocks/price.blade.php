@@ -37,7 +37,7 @@
                         </div>
                         <div role="form" class="wpcf7" id="wpcf7-f8-p6-o2" lang="ru-RU" dir="ltr">
                             <div class="screen-reader-response"></div>
-                            <form action="/#wpcf7-f8-p6-o2" method="post" class="wpcf7-form" novalidate="novalidate">
+                            <form action="/order" method="post" class="wpcf7-form" novalidate="novalidate">
                                 @csrf
                                 <p><span class="wpcf7-form-control-wrap text-109"><input type="text" name="name" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required price-input" aria-required="true" aria-invalid="false" placeholder="{{__('common.price-placeholder-name')}}"/></span><br/>
                                     <span class="wpcf7-form-control-wrap tel-839"><input type="tel" name="phone" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-tel wpcf7-validates-as-required wpcf7-validates-as-tel price-input tel" aria-required="true" aria-invalid="false" placeholder="+380 __ - ___ - __ - __"/></span><br/>

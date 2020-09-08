@@ -62,5 +62,7 @@ return [
     'price-right-title-2' => 'сейчас!',
     'price-placeholder-name' => 'Ваше имя',
     'price-placeholder-skype' => 'Skype',
+    'loading' => 'Загружаю...',
+    'load-more' => 'Загрузить еще',
 
 ];

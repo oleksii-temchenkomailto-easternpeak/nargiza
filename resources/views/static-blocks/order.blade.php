@@ -6,11 +6,11 @@
             <h2 class="box-modal-header">{{__('common.order-title')}}</h2>
             <div role="form" class="wpcf7" id="wpcf7-f54-o3" lang="ru-RU" dir="ltr">
                 <div class="screen-reader-response"></div>
-                <form action="/#wpcf7-f54-o3" method="post" class="wpcf7-form d-flex justify-content-center flex-wrap box-modal-form" novalidate="novalidate">
+                <form action="/order" method="post" class="wpcf7-form d-flex justify-content-center flex-wrap box-modal-form" novalidate="novalidate">
                     @csrf
                     <p><span class="wpcf7-form-control-wrap text-693"><input type="text" name="name" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required box-modal-input" aria-required="true" aria-invalid="false" placeholder="Ваше имя"/></span><br/>
                         <span class="wpcf7-form-control-wrap tel-992"><input type="tel" name="phone" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-tel wpcf7-validates-as-required wpcf7-validates-as-tel box-modal-input tel" aria-required="true" aria-invalid="false" placeholder="+380 __ - ___ - __ - __"/></span><br/>
-                        <input type="submit" value="Записаться на консультацию" class="wpcf7-form-control wpcf7-submit box-modal-submit"/></p>
+                        <input type="submit" value="{{__('common.order')}}" class="wpcf7-form-control wpcf7-submit box-modal-submit"/></p>
                     <div class="wpcf7-response-output wpcf7-display-none"></div></form></div>      </div>
     </div>
 </section>
