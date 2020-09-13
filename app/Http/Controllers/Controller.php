@@ -22,6 +22,8 @@ class Controller extends BaseController
     public function order(Request $request)
     {
         OrderCreate::dispatch($request->all());
+        echo(__FILE__ . ':' . __LINE__);///@TODO Don't forget to remove.
+        die;
         OrderCreated::dispatch($request->all());
     }
 

@@ -8,8 +8,13 @@ use App\Events\OrderCreated;
  * Class OrderCreatedListener
  * @package App\Listeners
  */
-class OrderCreatedListener
+class OrderCreateListener
 {
+    public function __construct()
+    {
+        dd(__FILE__ . ':' . __LINE__);///@TODO Don't forget to remove.
+    }
+
     /**
      * @param OrderCreated $event
      * @throws \Throwable
