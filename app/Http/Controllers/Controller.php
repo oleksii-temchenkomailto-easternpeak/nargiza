@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Events\OrderCreated;
+use App\Events\OrderCreate;
 use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 use Illuminate\Foundation\Bus\DispatchesJobs;
 use Illuminate\Foundation\Validation\ValidatesRequests;
@@ -17,20 +19,10 @@ class Controller extends BaseController
         return view('index');
     }
 
-    public function admin()
-    {
-        dd(__FILE__ . ':' . __LINE__);///@TODO Don't forget to remove.
-    }
-
-    public function adminAjax(Request $request)
-    {
-        dd($request->all());
-    }
-
     public function order(Request $request)
     {
-//        OrderCreated::dispatch($request->all());
-        dd(__FILE__ . ':' . __LINE__);///@TODO Don't forget to remove.
+        OrderCreate::dispatch($request->all());
+        OrderCreated::dispatch($request->all());
     }
 
     public function subscribe()
