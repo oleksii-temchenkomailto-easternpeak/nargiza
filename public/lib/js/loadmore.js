@@ -1,18 +1,30 @@
 jQuery(function ($) {
+    let currentPage = 0;
+    let maxPages = 4;
+
     $('#true_loadmore').click(function () {
         $(this).text(loading_text);
         $(this).addClass("active");
-        var data = {'action': 'loadmore', 'query': true_posts, 'page': current_page};
+        let $form = $('.more-articles-form:first');
+        var data = $form.serialize();
         $.ajax({
-            url: ajaxurl, data: data, type: 'POST', success: function (data) {
+            url: $form.attr('action'), data: data, type: 'GET', success: function (data) {
                 if (data) {
-                    $('#true_loadmore').text(load_more_text).before(data);
-                    current_page++;
-                    if (current_page == max_pages) $("#true_loadmore").remove();
-                } else {
-                    $('#true_loadmore').remove();
+                    if (data.html) {
+                        $('#true_loadmore').text(load_more_text).before(data.html);
+                        currentPage++;
+                        if (currentPage >= maxPages) {
+                            $("#true_loadmore").remove();
+                        }
+                    } else {
+                        $('#true_loadmore').remove();
+                    }
+
+                    if (!data.loadmore) {
+                        $('#true_loadmore').remove();
+                    }
                 }
             }
         });
-    });
+    }).click();
 });

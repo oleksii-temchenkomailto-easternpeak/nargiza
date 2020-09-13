@@ -19,5 +19,7 @@ Route::get('/', function () {
 
 Route::get('/', 'Controller@index');
 Route::get('/admin', 'Controller@admin');
-Route::post('/admin-ajax', 'Controller@adminAjax');
 Route::post('contact-form', 'Controller@contactForm');
+Route::post('order', 'Controller@order');
+Route::post('subscribe', 'Controller@subscribe');
+Route::get('load-articles', 'Controller@loadArticles');

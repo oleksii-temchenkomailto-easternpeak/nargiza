@@ -42,6 +42,7 @@ return [
     'more-articles' => 'Больше статей',
     'subscribe' => 'Подпишитесь на рассылку,',
     'subscribe-text' => 'чтобы получать новые полезные статьи',
+    'subscribe-now' => 'Подписаться!',
     'your-email' => 'Ваш e-mail',
     'thanks-for-subscription' => 'Спасибо за подписку!',
     'subscription-thanks-text' => 'Полезные статьи ждут вас.',
