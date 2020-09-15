@@ -30,7 +30,6 @@ class OrderProvider extends ServiceProvider
      */
     public function register()
     {
-        dd(__FILE__ . ':' . __LINE__);///@TODO Don't forget to remove.
         //
     }
 
@@ -41,7 +40,6 @@ class OrderProvider extends ServiceProvider
      */
     public function boot()
     {
-        dd(__FILE__ . ':' . __LINE__);///@TODO Don't forget to remove.
         parent::boot();
 
         //

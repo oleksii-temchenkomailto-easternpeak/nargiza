@@ -12,11 +12,14 @@ class OrderCreate
 {
     use Dispatchable;
 
+    public $data;
+
     /**
-     * OrderCreated constructor.
-     * @param Order $order
+     * OrderCreate constructor.
+     * @param array $data
      */
-    public function __construct()
+    public function __construct(array $data)
     {
+        $this->data = $data;
     }
 }

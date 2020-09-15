@@ -16,7 +16,6 @@ class OrderCreatedListener
      */
     public function handle(OrderCreated $event)
     {
-        dd(__FILE__ . ':' . __LINE__);///@TODO Don't forget to remove.
 //        $order = $event->order;
 //        $store = $event->order->store;
 //

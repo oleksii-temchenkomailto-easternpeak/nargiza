@@ -2,7 +2,8 @@
 
 namespace App\Listeners;
 
-use App\Events\OrderCreated;
+use App\Events\OrderCreate;
+use App\Jobs\SendOrderMail;
 
 /**
  * Class OrderCreatedListener
@@ -12,16 +13,15 @@ class OrderCreateListener
 {
     public function __construct()
     {
-        dd(__FILE__ . ':' . __LINE__);///@TODO Don't forget to remove.
     }
 
     /**
-     * @param OrderCreated $event
+     * @param OrderCreate $event
      * @throws \Throwable
      */
-    public function handle(OrderCreated $event)
+    public function handle(OrderCreate $event)
     {
-        dd(__FILE__ . ':' . __LINE__);///@TODO Don't forget to remove.
+        SendOrderMail::dispatch($event->data);
 //        $order = $event->order;
 //        $store = $event->order->store;
 //

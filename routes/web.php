@@ -22,3 +22,4 @@ Route::post('contact-form', 'Controller@contactForm');
 Route::post('order', 'Controller@order');
 Route::post('subscribe', 'Controller@subscribe');
 Route::get('load-articles', 'Controller@loadArticles');
+Route::get('test', 'Controller@test');

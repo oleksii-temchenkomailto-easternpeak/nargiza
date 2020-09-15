@@ -14,9 +14,10 @@ class OrderCreated
 
     /**
      * OrderCreated constructor.
-     * @param Order $order
+     * @param array $data
      */
-    public function __construct()
+    public function __construct(array $data)
     {
+        $this->data = $data;
     }
 }
