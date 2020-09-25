@@ -9,6 +9,7 @@ use Illuminate\Foundation\Bus\DispatchesJobs;
 use Illuminate\Foundation\Validation\ValidatesRequests;
 use Illuminate\Http\Request;
 use Illuminate\Routing\Controller as BaseController;
+use Illuminate\Support\Facades\Validator;
 
 class Controller extends BaseController
 {
@@ -26,7 +27,36 @@ class Controller extends BaseController
 
     public function order(Request $request)
     {
+        $validator = Validator::make($request->all(), array(
+            'name' => 'required',
+            'phone' => 'required',
+            'skype' => 'sometimes|required',
+        ));
+
+        if ($validator->fails()) {
+            $responce = [
+                "into" => "#wpcf7-f54-o3",
+                "status" => "validation_failed",
+                "message" => "",
+            ];
+            $failedFields = array_keys($validator->failed());
+            foreach ($failedFields as $field) {
+                $responce["invalidFields"][] = [
+                    "into" => "span.wpcf7-form-control-wrap.span-" . $field,
+                    "message" =>"",
+                    "idref" =>null
+                ];
+            }
+            return response()->json($responce);
+        }
         OrderCreate::dispatch($request->all());
+
+        $responce = [
+            "into" => "#wpcf7-f54-o3",
+            "status" => "mail_sent",
+            "message" => "\u0421\u043f\u0430\u0441\u0438\u0431\u043e \u0437\u0430 \u0412\u0430\u0448\u0435 \u0441\u043e\u043e\u0431\u0449\u0435\u043d\u0438\u0435. \u041e\u043d\u043e \u0443\u0441\u043f\u0435\u0448\u043d\u043e \u043e\u0442\u043f\u0440\u0430\u0432\u043b\u0435\u043d\u043e."
+        ];
+        return response()->json($responce);
     }
 
     public function subscribe()

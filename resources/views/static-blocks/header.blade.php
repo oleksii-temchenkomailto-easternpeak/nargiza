@@ -19,7 +19,7 @@
                                 <li id="menu-item-14" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-14"><a href="#about">{{ __('navigaabout.main') }}</a></li>
                                 <li id="menu-item-15" class="mobile-visible menu-item menu-item-type-custom menu-item-object-custom menu-item-15"><a href="#education">{{ __('navigation.education') }}</a></li>
                                 <li id="menu-item-16" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-16"><a href="#questions">{{ __('navigation.questions') }}</a></li>
-                                <li id="menu-item-17" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-17"><a href="#article">{{ __('navigation.article') }}</a></li>
+{{--                                <li id="menu-item-17" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-17"><a href="#article">{{ __('navigation.article') }}</a></li>--}}
                                 <li id="menu-item-18" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-18"><a href="#contacts">{{ __('navigation.contacts') }}</a></li>
                             </ul>              </div>
                     </div>

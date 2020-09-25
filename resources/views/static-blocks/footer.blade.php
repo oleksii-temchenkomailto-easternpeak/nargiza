@@ -6,7 +6,7 @@
         <div class="row">
             <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
                 <div class="d-flex justify-content-between align-items-center block-footer">
-                    <p class="footer-text">{{__('common.copyright')}}</p>
+                    <p class="footer-text">{{ __('common.copyright', ['year' => date("Y")]) }}</p>
                     <div class="d-flex justify-content-sm-center justify-content-center">
                         @foreach($contactsFooter as $network)
                             @if(!isset($networks->$network))

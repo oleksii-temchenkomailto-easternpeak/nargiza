@@ -337,7 +337,6 @@
                 $response.attr( 'role', 'alert' ).focus();
             } );
         };
-
         $.ajax( {
             type: 'POST',
             url: $form.attr('action'),

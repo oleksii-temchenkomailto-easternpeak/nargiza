@@ -47,7 +47,7 @@ return [
     'thanks-for-subscription' => 'Спасибо за подписку!',
     'subscription-thanks-text' => 'Полезные статьи ждут вас.',
     'subscription-success' => 'Хорошо',
-    'copyright' => '© Все права защищены 2020',
+    'copyright' => '© Все права защищены :year',
     'order-title' => 'Сделай первый шаг!',
     'order-success-button' => 'Хорошо, жду',
     'order-success-text-1' => 'Спасибо за доверие!',
