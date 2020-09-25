@@ -22,8 +22,8 @@
     <div class="d-flex justify-content-center align-items-center box-modal-flex">
         <div class="block-box-modal block-box-modal-success">
             <img src="/lib/wp-content/themes/psychologist/img/close.jpg" alt="" class="close-box-modal">
-            <p class="modal-success-text">{{__('common.order-success-button')}}</p>
-            <p class="modal-success-text-connect">{!! __('common.order-success-button') !!}</p>
+            <p class="modal-success-text">{{__('common.order-success-text-1')}}</p>
+            <p class="modal-success-text-connect">{!! __('common.order-success-text-2') !!}</p>
             <div class="d-flex justify-content-center"><button class='modal-success-good'>{{__('common.order-success-button')}}</button></div>
         </div>
     </div>

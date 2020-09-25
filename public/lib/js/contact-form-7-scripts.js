@@ -279,6 +279,7 @@
                     $form.addClass( 'sent' );
 
                     wpcf7.triggerEvent( data.into, 'mailsent', detail );
+                    $('.box-modal-success').show();
                     break;
                 case 'mail_failed':
                     $message.addClass( 'wpcf7-mail-sent-ng' );
