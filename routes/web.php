@@ -1,7 +1,5 @@
 <?php
 
-use Illuminate\Support\Facades\Route;
-
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -13,13 +11,26 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/','Front\\HomeController@index')->name('front.home');
+Route::get('files/{id}/preview','Front\\FileController@filePreview')->name('front.file.preview');
+Route::get('files/{id}/download','Front\\FileController@fileDownload')->name('front.file.download');
 
-Route::get('/', 'Controller@index');
-Route::post('contact-form', 'Controller@contactForm');
-Route::post('order', 'Controller@order');
-Route::post('subscribe', 'Controller@subscribe');
-Route::get('load-articles', 'Controller@loadArticles');
-Route::get('test', 'Controller@test');
+Auth::routes();
+
+// NOTE:
+// remove the demo middleware before you start on a project, this middleware if only
+// for demo purpose to prevent viewers to modify data on a live demo site
+
+// admin
+Route::prefix('admin')->namespace('Admin')->middleware(['auth','demo'])->group(function()
+{
+    // single page
+    Route::get('/', 'SinglePageController@displaySPA')->name('admin.spa');
+
+    // resource routes
+    Route::resource('users','UserController');
+    Route::resource('groups','GroupController');
+    Route::resource('permissions','PermissionController');
+    Route::resource('files','FileController');
+    Route::resource('file-groups','FileGroupController');
+});
