@@ -34,3 +34,16 @@ Route::prefix('admin')->namespace('Admin')->middleware(['auth','demo'])->group(f
     Route::resource('files','FileController');
     Route::resource('file-groups','FileGroupController');
 });
+
+
+
+Route::get('/', function () {
+    return view('welcome');
+});
+
+Route::get('/', 'Controller@index');
+Route::post('contact-form', 'Controller@contactForm');
+Route::post('order', 'Controller@order');
+Route::post('subscribe', 'Controller@subscribe');
+Route::get('load-articles', 'Controller@loadArticles');
+Route::get('test', 'Controller@test');
