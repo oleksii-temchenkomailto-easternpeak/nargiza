@@ -8,8 +8,8 @@
                     <v-text-field prepend-icon="search" label="Filter By Name" v-model="filters.name"></v-text-field>
                 </div>
                 <div class="flex-grow-1 text-right">
-                    <v-btn @click="showDialog('file_group_add')" dark class="primary lighten-1">
-                        New File Group
+                    <v-btn @click="showDialog('article_group_add')" dark class="primary lighten-1">
+                        New Article Group
                         <v-icon right>mdi-add</v-icon>
                     </v-btn>
                 </div>
@@ -28,7 +28,7 @@
                 <tbody>
                 <tr v-for="item in items" :key="item.id">
                     <td>
-                        <v-btn @click="showDialog('file_group_edit',item)" icon small>
+                        <v-btn @click="showDialog('article_group_edit',item)" icon small>
                             <v-icon class="blue--text">edit</v-icon>
                         </v-btn>
                         <v-btn @click="trash(props.item)" icon small>
@@ -37,47 +37,47 @@
                     </td>
                     <td>{{ item.name }}</td>
                     <td>{{ item.description }}</td>
-                    <td>{{ item.file_count }}</td>
+                    <td>{{ item.article_count }}</td>
                     <td>{{ $appFormatters.formatDate(item.created_at) }}</td>
                 </tr>
                 </tbody>
             </template>
         </v-data-table>
 
-        <!-- add file group -->
+        <!-- add article group -->
         <v-dialog v-model="dialogs.add.show" fullscreen transition="dialog-bottom-transition" :overlay=false>
             <v-card>
                 <v-toolbar class="primary">
                     <v-btn icon @click.native="dialogs.add.show = false">
                         <v-icon>close</v-icon>
                     </v-btn>
-                    <v-toolbar-title>Create New File Group</v-toolbar-title>
+                    <v-toolbar-title>Create New Article Group</v-toolbar-title>
                     <v-spacer></v-spacer>
                     <v-toolbar-items>
                         <v-btn text @click.native="dialogs.add.show = false">Done</v-btn>
                     </v-toolbar-items>
                 </v-toolbar>
                 <v-card-text>
-                    <file-group-add></file-group-add>
+                    <article-group-add></article-group-add>
                 </v-card-text>
             </v-card>
         </v-dialog>
 
-        <!-- edit file group -->
+        <!-- edit article group -->
         <v-dialog v-model="dialogs.edit.show" fullscreen :laze="false" transition="dialog-bottom-transition" :overlay=false>
             <v-card>
                 <v-toolbar class="primary">
                     <v-btn icon @click.native="dialogs.edit.show = false">
                         <v-icon>close</v-icon>
                     </v-btn>
-                    <v-toolbar-title>Edit File Group</v-toolbar-title>
+                    <v-toolbar-title>Edit Article Group</v-toolbar-title>
                     <v-spacer></v-spacer>
                     <v-toolbar-items>
                         <v-btn text @click.native="dialogs.edit.show = false">Done</v-btn>
                     </v-toolbar-items>
                 </v-toolbar>
                 <v-card-text>
-                    <file-group-edit :propFileGroupId="dialogs.edit.fileGroup.id"></file-group-edit>
+                    <article-group-edit :propArticleGroupId="dialogs.edit.articleGroup.id"></article-group-edit>
                 </v-card-text>
             </v-card>
         </v-dialog>
@@ -86,12 +86,12 @@
 </template>
 
 <script>
-    import FileGroupAdd from './FileGroupAdd.vue';
-    import FileGroupEdit from './FileGroupEdit.vue';
+    import ArticleGroupAdd from './ArticleGroupAdd.vue';
+    import ArticleGroupEdit from './ArticleGroupEdit.vue';
     export default {
         components: {
-            FileGroupAdd,
-            FileGroupEdit
+            ArticleGroupAdd,
+            ArticleGroupEdit
         },
         data() {
             return {
@@ -99,7 +99,7 @@
                     { text: 'Action', value: false, align: 'left', sortable: false },
                     { text: 'Group Name', value: 'name', align: 'left', sortable: false },
                     { text: 'Description', value: 'description', align: 'left', sortable: false },
-                    { text: 'Total Files', value: 'file_count', align: 'left', sortable: false },
+                    { text: 'Total Articles', value: 'article_count', align: 'left', sortable: false },
                     { text: 'Date Created', value: 'created_at', align: 'left', sortable: false },
                 ],
                 items: [],
@@ -114,7 +114,7 @@
 
                 dialogs: {
                     edit: {
-                        fileGroup: {},
+                        articleGroup: {},
                         show: false
                     },
                     add: {
@@ -124,23 +124,23 @@
             }
         },
         mounted() {
-            console.log('pages.files.components.FileGroupLists.vue');
+            console.log('pages.articles.components.ArticleGroupLists.vue');
 
             const self = this;
 
             self.$eventBus.$on(['FILE_GROUP_ADDED','FILE_GROUP_UPDATED','FILE_GROUP_DELETED'],()=>{
-                self.loadFileGroups(()=>{});
+                self.loadArticleGroups(()=>{});
             });
         },
         watch: {
             'filters.name':_.debounce(function(v) {
-                this.loadFileGroups(()=>{});
+                this.loadArticleGroups(()=>{});
             },500),
             'pagination.page':function(){
-                this.loadFileGroups(()=>{});
+                this.loadArticleGroups(()=>{});
             },
             'pagination.rowsPerPage':function(){
-                this.loadFileGroups(()=>{});
+                this.loadArticleGroups(()=>{});
             },
         },
         methods: {
@@ -150,10 +150,10 @@
                 self.$store.commit('showDialog',{
                     type: "confirm",
                     title: "Confirm Deletion",
-                    message: "Are you sure you want to delete this file group?",
+                    message: "Are you sure you want to delete this article group?",
                     okCb: ()=>{
 
-                        axios.delete('/admin/file-groups/' + group.id).then(function(response) {
+                        axios.delete('/admin/article-groups/' + group.id).then(function(response) {
 
                             self.$store.commit('showSnackbar',{
                                 message: response.data.message,
@@ -187,20 +187,20 @@
                 const self = this;
 
                 switch (dialog){
-                    case 'file_group_edit':
-                        self.dialogs.edit.fileGroup = data;
+                    case 'article_group_edit':
+                        self.dialogs.edit.articleGroup = data;
                         setTimeout(()=>{
                             self.dialogs.edit.show = true;
                         },500);
                         break;
-                    case 'file_group_add':
+                    case 'article_group_add':
                         setTimeout(()=>{
                             self.dialogs.add.show = true;
                         },500);
                         break;
                 }
             },
-            loadFileGroups(cb) {
+            loadArticleGroups(cb) {
 
                 const self = this;
 
@@ -210,7 +210,7 @@
                     per_page: self.pagination.rowsPerPage
                 };
 
-                axios.get('/admin/file-groups',{params: params}).then(function(response) {
+                axios.get('/admin/article-groups',{params: params}).then(function(response) {
                     self.items = response.data.data.data;
                     self.totalItems = response.data.data.total;
                     self.pagination.totalItems = response.data.data.total;

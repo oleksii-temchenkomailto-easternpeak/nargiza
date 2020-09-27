@@ -47,23 +47,23 @@ class SinglePageController extends AdminController
             new MenuItem([
                 'group_requirements' => [],
                 'permission_requirements' => ['superuser'],
-                'label'=>'Files',
+                'label'=>'Articles',
                 'nav_type' => MenuItem::$NAV_TYPE_NAV,
                 'icon'=>'cloud_circle',
                 'route_type'=>'vue',
-                'route_name'=>'files',
+                'route_name'=>'articles',
                 'visible'=>true,
             ]),
-            new MenuItem([
-                'group_requirements' => [],
-                'permission_requirements' => ['superuser'],
-                'label'=>'Settings',
-                'nav_type' => MenuItem::$NAV_TYPE_NAV,
-                'icon'=>'settings',
-                'route_type'=>'vue',
-                'route_name'=>'settings',
-                'visible'=>true,
-            ]),
+//            new MenuItem([
+//                'group_requirements' => [],
+//                'permission_requirements' => ['superuser'],
+//                'label'=>'Files',
+//                'nav_type' => MenuItem::$NAV_TYPE_NAV,
+//                'icon'=>'cloud_circle',
+//                'route_type'=>'vue',
+//                'route_name'=>'files',
+//                'visible'=>true,
+//            ]),
             new MenuItem([
                 'nav_type' => MenuItem::$NAV_TYPE_DIVIDER
             ])

@@ -1,20 +1,20 @@
 <template>
     <div class="component-wrap">
-        <v-card dark>
-            <v-form v-model="valid" ref="fileGroupFormEdit" lazy-validation>
+        <v-card>
+            <v-form v-model="valid" ref="articleGroupFormAdd" lazy-validation>
                 <v-container grid-list-md>
                     <v-layout row wrap>
                         <v-flex xs12>
-                            <div class="body-2 white--text">File Group Details</div>
+                            <div class="body-2 white--text">Article Group Details</div>
                         </v-flex>
                         <v-flex xs12>
-                            <v-text-field dark label="Group Name" v-model="name" :rules="nameRules"></v-text-field>
+                            <v-text-field label="Group Name" v-model="name" :rules="nameRules"></v-text-field>
                         </v-flex>
                         <v-flex xs12>
-                            <v-textarea dark label="Group Description" v-model="description" :rules="descriptionRules"></v-textarea>
+                            <v-textarea label="Group Description" v-model="description" :rules="descriptionRules"></v-textarea>
                         </v-flex>
                         <v-flex xs12>
-                            <v-btn @click="save()" :disabled="!valid" color="primary" dark>Update</v-btn>
+                            <v-btn @click="save()" :disabled="!valid" color="primary">Save</v-btn>
                         </v-flex>
                     </v-layout>
                 </v-container>
@@ -25,11 +25,6 @@
 
 <script>
     export default {
-        props: {
-            propFileGroupId: {
-                required: true
-            }
-        },
         data() {
             return {
                 valid: false,
@@ -45,14 +40,9 @@
             }
         },
         mounted() {
-            console.log('pages.files.components.FileGroupEdit.vue');
+            console.log('pages.articles.components.ArticleGroupAdd.vue');
 
             const self = this;
-        },
-        watch: {
-            propFileGroupId(v) {
-                if(v) this.loadFileGroup(()=>{});
-            }
         },
         methods: {
             save() {
@@ -65,7 +55,7 @@
 
                 self.isLoading = true;
 
-                axios.put('/admin/file-groups/' + self.propFileGroupId,payload).then(function(response) {
+                axios.post('/admin/article-groups',payload).then(function(response) {
 
                     self.$store.commit('showSnackbar',{
                         message: response.data.message,
@@ -74,7 +64,10 @@
                     });
 
                     self.isLoading = false;
-                    self.$eventBus.$emit('FILE_GROUP_UPDATED');
+                    self.$eventBus.$emit('FILE_GROUP_ADDED');
+
+                    // reset
+                    self.$refs.articleGroupFormAdd.reset();
 
                 }).catch(function (error) {
                     self.isLoading = false;
@@ -90,18 +83,7 @@
                         console.log('Error', error.message);
                     }
                 });
-            },
-            loadFileGroup(cb) {
-
-                const self = this;
-
-                axios.get('/admin/file-groups/' + self.propFileGroupId).then(function(response) {
-                    let Group = response.data.data;
-                    self.name = Group.name;
-                    self.description = Group.description;
-                    cb();
-                });
-            },
+            }
         }
     }
 </script>

@@ -70,14 +70,9 @@ const router = new Router({
             ]
         },
         {
-            name: 'files',
-            path: '/files',
-            component: require('./files/Files'),
-        },
-        {
-            name: 'settings',
-            path: '/settings',
-            component: require('./settings/Settings'),
+            name: 'articles',
+            path: '/articles',
+            component: require('./articles/Articles'),
         }
     ],
 });

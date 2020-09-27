@@ -2,34 +2,34 @@
     <div class="page_wrap_vue">
         <v-tabs color="primary" v-model="active">
 
-            <v-tab class="white--text" key="files" href="#files" ripple>
-                Files
+            <v-tab class="white--text" key="articles" href="#articles" ripple>
+                Articles
             </v-tab>
             <v-tab class="white--text" key="manage-groups" href="#manage-groups" ripple>
-                Manage File Groups
+                Manage Articles
             </v-tab>
             <v-tab class="white--text" key="upload" href="#upload" ripple>
                 Upload
             </v-tab>
 
-            <v-tab-item value="files">
+            <v-tab-item value="articles">
                 <v-card flat>
                     <v-card-text>
-                        <file-lists></file-lists>
+                        <article-lists></article-lists>
                     </v-card-text>
                 </v-card>
             </v-tab-item>
             <v-tab-item value="manage-groups">
                 <v-card flat>
                     <v-card-text>
-                        <file-group-lists></file-group-lists>
+                        <article-group-lists></article-group-lists>
                     </v-card-text>
                 </v-card>
             </v-tab-item>
             <v-tab-item value="upload">
                 <v-card flat>
                     <v-card-text>
-                        <file-upload></file-upload>
+                        <article-upload></article-upload>
                     </v-card-text>
                 </v-card>
             </v-tab-item>
@@ -38,27 +38,27 @@
 </template>
 
 <script>
-    import FileGroupLists from './components/FileGroupLists.vue';
-    import FileUpload from './components/FileUpload.vue';
-    import FileLists from './components/FileLists.vue';
+    import ArticleGroupLists from './components/ArticleGroupLists.vue';
+    import ArticleUpload from './components/ArticleUpload.vue';
+    import ArticleLists from './components/ArticleLists.vue';
     export default {
         components: {
-            FileUpload,
-            FileGroupLists,
-            FileLists
+            ArticleUpload,
+            ArticleGroupLists,
+            ArticleLists
         },
         mounted() {
-            console.log('pages.FileManager.vue');
+            console.log('pages.ArticleManager.vue');
 
             const self = this;
 
             self.$store.commit('setBreadcrumbs',[
-                {label:'Files',name:''}
+                {label:'Articles',name:''}
             ]);
         },
         data() {
             return {
-                active: 'files'
+                active: 'articles'
             }
         },
         watch: {
