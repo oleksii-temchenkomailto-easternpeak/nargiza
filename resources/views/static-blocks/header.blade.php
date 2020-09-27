@@ -16,10 +16,10 @@
                             <ul id="menu-menu" class="menu-header"><li id="menu-item-11" class="active menu-item menu-item-type-custom menu-item-object-custom menu-item-11"><a href="#main">{{ __('navigation.main') }}</a></li>
                                 <li id="menu-item-12" class="mobile-visible menu-item menu-item-type-custom menu-item-object-custom menu-item-12"><a href="#advantages">{{ __('navigation.advantages') }}</a></li>
                                 <li id="menu-item-13" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-13"><a href="#service">{{ __('navigation.service') }}</a></li>
-                                <li id="menu-item-14" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-14"><a href="#about">{{ __('navigaabout.main') }}</a></li>
+                                <li id="menu-item-14" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-14"><a href="#about">{{ __('navigation.main') }}</a></li>
                                 <li id="menu-item-15" class="mobile-visible menu-item menu-item-type-custom menu-item-object-custom menu-item-15"><a href="#education">{{ __('navigation.education') }}</a></li>
                                 <li id="menu-item-16" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-16"><a href="#questions">{{ __('navigation.questions') }}</a></li>
-{{--                                <li id="menu-item-17" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-17"><a href="#article">{{ __('navigation.article') }}</a></li>--}}
+                                <li id="menu-item-17" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-17"><a href="#article">{{ __('navigation.article') }}</a></li>
                                 <li id="menu-item-18" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-18"><a href="#contacts">{{ __('navigation.contacts') }}</a></li>
                             </ul>              </div>
                     </div>
