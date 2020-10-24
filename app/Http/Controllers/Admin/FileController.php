@@ -34,11 +34,11 @@ class FileController extends AdminController
     /**
      * Display a listing of the resource.
      *
-     * @param Request $request
      * @return \Illuminate\Http\Response
      */
-    public function index(Request $request)
+    public function index()
     {
+        $request = request();
         $results = $this->fileRepository->index($request->all());
 
         return $this->sendResponseOk($results);

@@ -5,11 +5,11 @@
             <v-tab class="white--text" key="articles" href="#articles" ripple>
                 Articles
             </v-tab>
-            <v-tab class="white--text" key="manage-groups" href="#manage-groups" ripple>
-                Manage Articles
-            </v-tab>
+<!--            <v-tab class="white&#45;&#45;text" key="manage-groups" href="#manage-groups" ripple>-->
+<!--                Tags-->
+<!--            </v-tab>-->
             <v-tab class="white--text" key="upload" href="#upload" ripple>
-                Upload
+                New
             </v-tab>
 
             <v-tab-item value="articles">
@@ -29,7 +29,7 @@
             <v-tab-item value="upload">
                 <v-card flat>
                     <v-card-text>
-                        <article-upload></article-upload>
+                        <article-form-add></article-form-add>
                     </v-card-text>
                 </v-card>
             </v-tab-item>
@@ -38,12 +38,11 @@
 </template>
 
 <script>
-    import ArticleGroupLists from './components/ArticleGroupLists.vue';
-    import ArticleUpload from './components/ArticleUpload.vue';
+    // import ArticleFormAdd from './components/ArticleFormAdd.vue';
     import ArticleLists from './components/ArticleLists.vue';
     export default {
         components: {
-            ArticleUpload,
+            // ArticleFormAdd,
             ArticleGroupLists,
             ArticleLists
         },

@@ -14,16 +14,14 @@
                                     item-value="id"
                             ></v-select>
                         </v-flex>
-                        <v-flex xs12 sm4>
-                            <v-btn @click="clear()" block class="primary lighten-1" dark>
-                                Clear
-                            </v-btn>
-                        </v-flex>
                         <v-flex xs12>
                             <div class="dropzone" id="articleupload"></div>
                         </v-flex>
                     </v-layout>
                 </v-container>
+                <v-flex xs12>
+                    <v-btn @click="save()" :disabled="!valid" color="primary" dark>Save</v-btn>
+                </v-flex>
             </v-form>
         </v-card>
         <!-- /form -->
@@ -53,7 +51,8 @@
             });
         },
         methods: {
-            clear() {
+            save() {///@todo old clear() method
+                return;
                 const self = this;
 
                 _.each(self.addedArticles,f=>{
@@ -64,6 +63,7 @@
             },
             upload() {
 
+                console.log('here')
                 const self = this;
 
                 self.dropzone.processQueue();

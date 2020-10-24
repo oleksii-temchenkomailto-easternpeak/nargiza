@@ -24,11 +24,11 @@ class FileGroupController extends AdminController
     /**
      * Display a listing of the resource.
      *
-     * @param Request $request
      * @return \Illuminate\Http\Response
      */
-    public function index(Request $request)
+    public function index()
     {
+        $request = request();
         $data = $this->fileGroupRepository->index($request->all());
 
         return $this->sendResponseOk($data);

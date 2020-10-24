@@ -1,11 +1,10 @@
 <template>
     <div class="component-wrap">
-
         <!-- articlers -->
         <v-card>
             <div class="d-flex flex-column">
                 <div class="flex-grow-1 pa-2">
-                    <v-text-field prepend-icon="search" label="Filter By Name or Extension" v-model="filters.name"></v-text-field>
+<!--                    <v-text-field prepend-icon="search" label="Filter By Name or Extension" v-model="filters.name"></v-text-field>-->
                 </div>
                 <div class="flex-grow-1 pa-2">
                     Show Only:
