@@ -1,5 +1,5 @@
 @php
-    $headerContacts = [ 'phone', 'email'];
+    $headerContacts = [ 'phone'/*,'email', 'viber', 'facebook'*/, 'instagram'/*, 'telegram'*/];
 @endphp
 <header id="main">
     <div class="header-top-relative menu-hide-mobile">
@@ -8,7 +8,7 @@
                 <div class="row">
                     <div class="col-xl-3  col-lg-2 col-md-1 col-sm-12 col-12">
                         <div class="d-flex align-items-center block-header-left">
-                            <a href="{{ url('/')}}"><img src="/themes/psychologist/img/logo.png" alt="" class="logo-header"></a>
+                            <a href="{{ url('/')}}"><img src="/lib/wp-content/themes/psychologist/img/logo.png" alt="" class="logo-header"></a>
                         </div>
                     </div>
                     <div class="col-xl-9 col-lg-10 col-md-11 col-sm-12 col-12">
@@ -31,7 +31,7 @@
                             <div class="block-header-contacts d-flex justify-content-end">
                                 <div class="d-flex align-items-center header-contact">
                                     <img src="{{$networks->$network->smallImg}}" alt="" class="header-contact-img">
-                                    <a href="{{$networks->$network->href}}" class="header-contact-text">{{$networks->$network->text}}</a>
+                                    <a href="{{$networks->$network->href}}" target="_blank" class="header-contact-text">{{$networks->$network->text}}</a>
                                 </div>
                             </div>
                         @endforeach

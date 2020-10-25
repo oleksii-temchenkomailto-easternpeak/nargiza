@@ -21,7 +21,7 @@
                 <div class="education-slider-relative d-flex justify-content-sm-center">
                     <div class="education-slider">
                         @foreach($education->images as $image)
-                            <div class="education-slider-in"><a href="{{$image}}" data-fancybox="gallery"><img src="/lib/wp-content/themes/psychologist/img/education-1-big.jpg" alt="" class="education-slider-img"></a></div>
+                            <div class="education-slider-in"><a href="{{$image}}" data-fancybox="gallery"><img src="{{$image}}" alt="" class="education-slider-img"></a></div>
                         @endforeach
                     </div>
                     <div class="block-slider-button">

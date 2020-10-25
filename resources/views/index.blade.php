@@ -4,45 +4,41 @@
 
 
     $networks->phone = new \StdClass;
-    $networks->phone->href = 'tel:+380503031910';
+    $networks->phone->href = 'tel:+380661758418';
     $networks->phone->smallImg = '/lib/wp-content/themes/psychologist/img/phone.png';
-    $networks->phone->text = '+38 (050) 303 1910';
+    $networks->phone->text = '+38 (066) 17 58 418';
 
     $networks->email = new \StdClass;
-    $networks->email->href = 'mailto:?subject=' . e('common.email-subject');
+    $networks->email->href = 'mailto:nargiza.temchenko@gmail.com?subject=' . __('common.email-subject');
     $networks->email->smallImg = '/lib/wp-content/themes/psychologist/img/mail.png';
-    $networks->email->text = 'yanova.psi@gmail.com';
-
+    $networks->email->text = 'nargiza.temchenko@gmail.com';
 
     $networks->skype = new \StdClass;
-    $networks->skype->href = 'skype:EUG_PRO';
-    $networks->skype->text = 'skype';
+    $networks->skype->href = 'skype:live:a694f52e3eb3cc7f';
+    $networks->skype->text = 'Skype';
     $networks->skype->smallImg = '/lib/wp-content/themes/psychologist/img/footer-skype.png';
-
-    $networks->whatsapp = new \StdClass;
-    $networks->whatsapp->href = 'https://wa.me/380503031910';
-    $networks->whatsapp->smallImg = '/lib/wp-content/themes/psychologist/img/footer-whatsapp.png';
-    $networks->whatsapp->img = '/lib/wp-content/themes/psychologist/img/whatsapp.png';
-    $networks->whatsapp->text = 'Whatsapp';
+    $networks->skype->img = '/lib/wp-content/themes/psychologist/img/footer-skype.png';
 
     $networks->viber = new \StdClass;
-    $networks->viber->href = 'viber://add?number=+380503031910';
+    $networks->viber->href = 'viber://add?number=+380661758418';
     $networks->viber->smallImg = '/lib/wp-content/themes/psychologist/img/footer-viber.png';
     $networks->viber->img = '/lib/wp-content/themes/psychologist/img/viber.png';
     $networks->viber->text = 'Viber';
 
     $networks->facebook = new \StdClass;
-    $networks->facebook->href = 'https://www.facebook.com/%D0%9B%D1%8E%D0%B1%D0%BE%D0%B2%D1%8C-%D0%AF%D0%BD%D0%BE%D0%B2%D0%B0-%D0%BF%D1%81%D0%B8%D1%85%D0%BE%D0%BB%D0%BE%D0%B3-296616707800319/?modal=admin_todo_tour';
+    $networks->facebook->href = 'https://www.facebook.com/nargiza.temchenko/';
     $networks->facebook->smallImg = '/lib/wp-content/themes/psychologist/img/fb.png';
+    $networks->facebook->img = '/lib/wp-content/themes/psychologist/img/fb.png';
+    $networks->facebook->text = 'Facebook';
 
     $networks->instagram = new \StdClass;
-    $networks->instagram->href = 'https://www.instagram.com/lyubov.yanova/?r=nametag';
-    $networks->instagram->smallImg = '/lib/wp-content/themes/psychologist/img/insta.png';
+    $networks->instagram->href = 'https://www.instagram.com/psychologist.nargiza.temchenko';
+    $networks->instagram->smallImg = '/lib/wp-content/themes/psychologist/img/footer-instagram.png';
     $networks->instagram->img = '/lib/wp-content/themes/psychologist/img/insta-main.png';
     $networks->instagram->text = 'Instagram';
 
     $networks->telegram = new \StdClass;
-    $networks->telegram->href = 'tg://resolve?domain=@lyubov_yanova';
+    $networks->telegram->href = 'tg://resolve?domain=@psychologist_nargiza_temchenko';
     $networks->telegram->smallImg = '/lib/wp-content/themes/psychologist/img/footer-telegram.png';
     $networks->telegram->img = '/lib/wp-content/themes/psychologist/img/telegram.png';
     $networks->telegram->text = 'Telegram';
@@ -123,13 +119,24 @@ $education->text[] = 'Терапевтическая обучающая груп
 $education->text[] = 'Прошла обучение в Международном Эриксоновском Университет коучинга. Профессиональный коуч.';
 $education->text[] = 'Закончила обучение методу Эмоционально- образной терапии, 1 ступень. В центре эмоционально-образной терапии Линде.';
 $education->images = [];
-$education->images[] = '/lib/wp-content/themes/psychologist/img/education-1-big.jpg';
+$education->images[] = '/lib/wp-content/themes/psychologist/img/education-1.jpg';
 $education->images[] = '/lib/wp-content/themes/psychologist/img/education-2.jpg';
 $education->images[] = '/lib/wp-content/themes/psychologist/img/education-3.jpg';
 $education->images[] = '/lib/wp-content/themes/psychologist/img/education-4.jpg';
 $education->images[] = '/lib/wp-content/themes/psychologist/img/education-5.jpg';
 $education->images[] = '/lib/wp-content/themes/psychologist/img/education-6.jpg';
 $education->images[] = '/lib/wp-content/themes/psychologist/img/education-7.jpg';
+$education->images[] = '/lib/wp-content/themes/psychologist/img/education-8.jpg';
+$education->images[] = '/lib/wp-content/themes/psychologist/img/education-9.jpg';
+$education->images[] = '/lib/wp-content/themes/psychologist/img/education-10.jpg';
+$education->images[] = '/lib/wp-content/themes/psychologist/img/education-11.jpg';
+$education->images[] = '/lib/wp-content/themes/psychologist/img/education-12.jpg';
+$education->images[] = '/lib/wp-content/themes/psychologist/img/education-13.jpg';
+$education->images[] = '/lib/wp-content/themes/psychologist/img/education-14.jpg';
+$education->images[] = '/lib/wp-content/themes/psychologist/img/education-15.jpg';
+$education->images[] = '/lib/wp-content/themes/psychologist/img/education-16.jpg';
+$education->images[] = '/lib/wp-content/themes/psychologist/img/education-17.jpg';
+$education->images[] = '/lib/wp-content/themes/psychologist/img/education-18.jpg';
 @endphp
 
 <!-- Header -->
@@ -253,8 +260,8 @@ $education->images[] = '/lib/wp-content/themes/psychologist/img/education-7.jpg'
     @include('static-blocks/about')
     @include('static-blocks/education')
     @include('static-blocks/questions')
-    @include('static-blocks/articles')
-    @include('static-blocks/subscription')
+{{--    @include('static-blocks/articles')--}}
+{{--    @include('static-blocks/subscription')--}}
     @include('static-blocks/price')
     @include('static-blocks/footer')
     @include('static-blocks/order')

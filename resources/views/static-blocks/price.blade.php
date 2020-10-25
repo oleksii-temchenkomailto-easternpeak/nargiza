@@ -1,5 +1,5 @@
 @php
-    $priceContacts = [ 'phone', 'email', 'skype'];
+    $priceContacts = [ 'phone'/*,'email', 'viber', 'facebook'*/, 'instagram'/*, 'telegram'*/];
 @endphp
 <section class="price" id="contacts">
     <div class="parallax-price" data-type="background" data-speed="40">

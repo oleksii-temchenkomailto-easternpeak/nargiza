@@ -1,5 +1,7 @@
 @php
-    $contactsFooter = ['skype', 'whatsapp', 'viber', 'facebook', 'instagram', 'telegram', ];
+//    $contactsFooter = ['skype', 'whatsapp', 'viber', 'facebook', 'instagram', 'telegram', ];
+
+    $contactsFooter = [ 'phone'/*,'email'*/, 'viber', 'facebook', 'instagram', 'telegram'];
 @endphp
 <footer>
     <div class="container">
@@ -13,7 +15,7 @@
                                 @continue
                             @endif
                         <a href="{{$networks->$network->href}}" class="footer-network" target="_blank"><img src="{{$networks->$network->smallImg}}" alt="" class="footer-network-img"></a>
-                        @endforeach
+                        -- @endforeach
                     </div>
                 </div>
             </div>

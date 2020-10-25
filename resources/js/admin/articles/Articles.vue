@@ -38,12 +38,11 @@
 </template>
 
 <script>
-    // import ArticleFormAdd from './components/ArticleFormAdd.vue';
+    import ArticleFormAdd from './components/ArticleFormAdd.vue';
     import ArticleLists from './components/ArticleLists.vue';
     export default {
         components: {
-            // ArticleFormAdd,
-            ArticleGroupLists,
+            ArticleFormAdd,
             ArticleLists
         },
         mounted() {

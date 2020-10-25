@@ -1,5 +1,5 @@
 @php
-    $networksList = [ 'whatsapp', 'viber', 'telegram', 'instagram'];
+    $networksList = ['skype', 'facebook'];
 @endphp
 <section class="networks">
     <div class="container">
@@ -16,7 +16,7 @@
                             @if(!isset($networks->$network))
                                 @continue
                             @endif
-                            <img src="/lib/wp-content/themes/psychologist/img/wave-network.png" alt="" class="wave-network">
+{{--                            <img src="/lib/wp-content/themes/psychologist/img/wave-network.png" alt="" class="wave-network">--}}
                             <div class="block-network d-flex justify-content-center flex-wrap">
                                 <a href="{{$networks->$network->href}}"><img src="{{$networks->$network->img}}" alt="" class="network"></a>
                                 <a href="{{$networks->$network->href}}" target="_blank" class="network-text">{{$networks->$network->text}}</a>

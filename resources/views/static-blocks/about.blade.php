@@ -24,7 +24,7 @@
                         @endforeach
                     </div>
                     <div class="d-flex justify-content-end">
-                        <p class="about-text-more">{{__('about.more')}}</p>
+                        <p class="about-text-more">{{__('common.more')}}</p>
                     </div>
                 </div>
             </div>

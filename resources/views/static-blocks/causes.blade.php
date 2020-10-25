@@ -8,8 +8,8 @@
     <div class="container">
         <div class="row">
             <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
-                <h3 class="header-block">{{ $count }} {{ trans_choice('common.causes-title-1', $count) }}<br>
-                    <span class="header-block-weight">{{ __('common.causes-title-2') }}</span>
+                <h3 class="header-block">{{ __('common.causes-title-1' ) }}<br>
+{{--                    <span class="header-block-weight">{{ __('common.causes-title-2') }}</span>--}}
                 </h3>
                 <div class="d-flex justify-content-center">
                     <img src="/lib/wp-content/themes/psychologist/img/wave.png" alt="" class="header-block-wave">

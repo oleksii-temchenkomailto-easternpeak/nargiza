@@ -5,22 +5,18 @@
             <v-form ref="articleFormUpload" lazy-validation>
                 <v-container grid-list-md>
                     <v-layout row wrap>
-                        <v-flex xs12 sm8>
-                            <v-select
-                                    label="Upload To Article Group"
-                                    v-bind:items="articleGroups"
-                                    v-model="uploadTo"
-                                    item-text="name"
-                                    item-value="id"
-                            ></v-select>
+                        <v-flex xs12 sm6>
+                            <v-text-field label="Title" v-model="name"></v-text-field>
                         </v-flex>
+
                         <v-flex xs12>
                             <div class="dropzone" id="articleupload"></div>
                         </v-flex>
+                        <textarea v-model="comment"></textarea>
                     </v-layout>
                 </v-container>
                 <v-flex xs12>
-                    <v-btn @click="save()" :disabled="!valid" color="primary" dark>Save</v-btn>
+                    <v-btn @click="save()" color="primary" dark>Save</v-btn>
                 </v-flex>
             </v-form>
         </v-card>
@@ -78,7 +74,7 @@
                     url:'/admin/articles',
                     paramName: "article", // The name that will be used to transfer the article
                     maxArticlesize: 50, // 50MB
-                    uploadMultiple: true,
+                    uploadMultiple: false,
                     //acceptedArticles: 'image/*',
                     headers: {'X-CSRF-TOKEN' : _token},
                     autoProcessQueue: true,
